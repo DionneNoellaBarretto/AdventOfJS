@@ -1,56 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⏲-Pomodoro Timer || Advent of JavaScript</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>⏲-Pomodoro Timer || Advent of JavaScript</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-
-<body>
-  
-  <div class="wrapper">
-    <div class="ring"></div>
-    <figure class="clock">
-
-      <div class="mins">0</div>
-      <div>:</div>
-      <div class="secs">00</div>
-      <audio src="http://soundbible.com/mp3/service-bell_daniel_simion.mp3"></audio>
-      <svg class="progress-ring" width="518" height="518" viewBox="0 0 518 518">
-        <circle class="progress-ring__circle" stroke-width="9px" x="0" y="y" cx="259" cy="259" r="254" />
-      </svg>
-    </figure>
-  </div>
-
-  <div class="btn-group">
-    <button class="start">start focus</button>
-    <button class="reset">reset</button>
-    <button class="pause">pause</button>
-  </div>
-
-
-  <form action=".">
-    <label for="focusTime">Focus Time</label>
-    <input type="number" value="1" id="focusTime" />
-    <label for="breakTime">Break Time</label>
-    <input type="number" value="1" id="breakTime" />
-    <button type="submit">Save settings</button>
-  </form>
-  <footer>
-    <div class="container">
-      <a href="https://store.selfteach.me/courses/d2550633-b921-4971-8371-ff53ea196d05/1099427-challenge-1/3310239-challenge-1-overview" rel="noopener noreferrer"
-        target="_blank">Advent of JS</a>
-      <div class="developer-author">
-        Developed By:
-        <a href="https://dionnenoellabarretto.github.io/" tager="_blank">Dionne Noella Barretto</a>
-      </div>
+  <body>
+    <div class="wrapper">
+      <figure class="clock">
+        <div class="mins">0</div>
+        <div>:</div>
+        <div class="secs">00</div>
+        <audio src="./sound/service-bell_daniel_simion.mp3"></audio>
+        <svg
+          class="progress-ring"
+          width="518"
+          height="518"
+          viewbox="0 0 518 518"
+        >
+          <circle
+            class="progress-ring__circle"
+            fill="transparent"
+            stroke-width="9px"
+            x="0"
+            y="y"
+            cx="259"
+            cy="259"
+            r="254"
+          />
+        </svg>
+      </figure>
+      
     </div>
-  </footer>
-</body>
+    <div class="btn-group">
+      <button class="start">start focus</button>
+      <button class="reset">reset</button>
+      <button class="pause">pause</button>
+    </div>
 
-
-
+    <form class="settings" action="." title="select a desireable # and save to local browser ">
+      <label for="focusTime">Focus Time (in minutes)</label>
+      <input type="number" value="1" id="focusTime" />
+      <label for="breakTime">Break Time (in minutes)</label>
+      <input type="number" value="1" id="breakTime" />
+      <button type="submit"> <img src="./images/gear.svg" alt="settings"> Save Preferences</button>
+    </form>
+    <footer>
+      <div class="container">
+        <div class="developer-author">
+          <a
+            href="https://dionnenoellabarretto.github.io/"
+            title="Click to navigate to Dionne Noella's Landing Page"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Copyrights © 2021 -
+            <img
+              src="./images/dnb.jfif"
+              class="dnb"
+              title="Click to navigate to Dionne Noella's Landing Page"
+              alt="dnb"
+            />
+            Dionne Noella Barretto</a
+          >
+          |
+          <a
+            title="Click to navigate to the challenge instructions"
+            href="https://store.selfteach.me/courses/d2550633-b921-4971-8371-ff53ea196d05/1099427-challenge-1/3310239-challenge-1-overview"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Advent of JS-Challenge#1</a
+          >
+          <!-- logic references : youtube and  https://abhik-b.github.io/pomodro-timer/ -->
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./js/settings.js"></script>
+  <script src="./js/timer.js"></script>
+  <script src="./js/progress.js"></script>
 </html>
